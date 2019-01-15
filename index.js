@@ -122,17 +122,35 @@
 //   default:
 //     console.log("Не Четное");
 // }
+//----------------------------
+// var age = prompt("age ?");
+// var sum = prompt("sum ?");
 
-var age = prompt("age ?");
-var sum = prompt("sum ?");
+// // if (age && sum) {
+// //   console.log("ssss");
+// // }
 
 // if (age && sum) {
-//   console.log("ssss");
-// }
+//   alert("ne chisla");
+// } else if (age >= 65) {
+//   sum = sum * 0.5;
+//   console.log(sum);
+// } else console.log(sum);
+//----------------------------
+var computerNum = localStorage.getItem("keyComputerNum");
 
-if (age && sum) {
-  alert("ne chisla");
-} else if (age >= 65) {
-  sum = sum * 0.5;
-  console.log(sum);
-} else console.log(sum);
+computerNum = computerNum ? +computerNum : Math.round(Math.random() * 10);
+var userNum = +prompt("try ?");
+if (userNum === computerNum) {
+  alert("win");
+  localStorage.removeItem("keyComputerNum");
+} else {
+  alert("looser");
+  localStorage.setItem("keyComputerNum", computerNum);
+}
+
+console.log("keyComputerNum");
+
+//написать осмысленный комментарий к каждой строке кода
+
+//кол-во удачные и  не удачных в body
