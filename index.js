@@ -137,20 +137,28 @@
 //   console.log(sum);
 // } else console.log(sum);
 //----------------------------
-var computerNum = localStorage.getItem("keyComputerNum");
+// var computerNum = localStorage.getItem("keyComputerNum");
 
-computerNum = computerNum ? +computerNum : Math.round(Math.random() * 10);
-var userNum = +prompt("try ?");
-if (userNum === computerNum) {
-  alert("win");
-  localStorage.removeItem("keyComputerNum");
-} else {
-  alert("looser");
-  localStorage.setItem("keyComputerNum", computerNum);
-}
+// computerNum = computerNum ? +computerNum : Math.round(Math.random() * 10);
+// var userNum = +prompt("try ?");
+// if (userNum === computerNum) {
+//   alert("win");
+//   localStorage.removeItem("keyComputerNum");
+// } else {
+//   alert("looser");
+//   localStorage.setItem("keyComputerNum", computerNum);
+// }
 
-console.log("keyComputerNum");
+// console.log("keyComputerNum");
 
-//написать осмысленный комментарий к каждой строке кода
+// //написать осмысленный комментарий к каждой строке кода
 
-//кол-во удачные и  не удачных в body
+// //кол-во удачные и  не удачных в body
+
+//---------------------
+var studNum = prompt("Сколько студентов ?");
+
+studNum = studNum ? +studNum : Math.round(Math.random() * studNum);
+console.log(studNum);
+
+//---------------------
